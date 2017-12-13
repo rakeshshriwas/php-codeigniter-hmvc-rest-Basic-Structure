@@ -18,7 +18,23 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-	define('ENVIRONMENT', 'development');
+	$server = $_SERVER['HTTP_HOST'];
+	switch ($server) {
+		case 'developemnt subdomain':
+			$env = 'development';
+			error_reporting(E_ALL);
+            ini_set('display_errors', 1);
+            break;
+		case 'localhost':
+            error_reporting(E_ALL);
+            ini_set('display_errors', 1);
+			$env = 'testing';
+			break;
+		default:
+			$env = 'production';
+			break;
+	}
+	define('ENVIRONMENT', $env);;
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING

@@ -22,7 +22,7 @@
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/php-codeigniter-hmvc-rest/';
+$config['base_url'] = 'http://localhost/restapi/';
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ $config['base_url'] = 'http://localhost/php-codeigniter-hmvc-rest/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
